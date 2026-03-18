@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import SongComponent from '../types/song';
 import type { Song } from '../types/song'; 
 import useStyles from "./fetchStyle";
-
+import SongsTable from "../songTable/songsTable";
 
 const Fetch = () => {
   const { classes } = useStyles()
@@ -48,11 +48,8 @@ const Fetch = () => {
       {error && <p>{error}</p>}
 
       {/* הצגת השירים במידה והטעינה הסתיימה ואין שגיאה */}
-      {!isLoading && !error && songsList.map((song, index) => (
-        <div key={index}>
-          <SongComponent id={song.id} name={song.name} artist={song.artist} album={song.album}/>
-        </div>
-      ))}
+      {!isLoading && !error && <SongsTable songsList={songsList}/>}
+
     </div>
   );
 };

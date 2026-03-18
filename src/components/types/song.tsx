@@ -4,10 +4,10 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import useStyles from './songStyle';
 
 export interface Song {
-    id: 34,
-    name: "Todo Es La Musica",
-    artist: "Omer Adam",
-    album: "Todo Es La Musica"
+    id: number,
+    name: string,
+    artist: string,
+    album: string
 }
 
 const SongComponent = (props: Song) => {
