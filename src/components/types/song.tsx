@@ -16,7 +16,7 @@ const SongComponent = (props: Song) => {
     return (
         <div className={classes.container}>
             <div className={classes.nameContainer}>
-                <PlayArrowIcon />
+                <PlayArrowIcon className={classes.icon}/>
                 <p>{props.name} - </p>
                 <p>{props.album}</p>
             </div>

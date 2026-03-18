@@ -2,8 +2,10 @@ import { makeStyles } from "tss-react/mui";
 
 const useStyles = makeStyles()(() => ({
     songContainer: {
-        Height: '100%',
-        width: '100%',
+        height: '100%',
+        maxWidth: '100%',
+        paddingRight: '1%',
+        paddingLeft: '1%',
         overflowY: 'auto'
     }
 }))

@@ -12,13 +12,13 @@ const useStyles = makeStyles()(() => ({
     },
     showsOutput: {
         width: '85%',
-        height: '80%'
+        height: '100%'
     },
     sideBar: {
         display: 'flex',
         flexDirection: 'column',
         width: '15%',
-        height: '80%',
+        height: '100%',
         borderLeft: '1px solid gray'
     }
 }));
