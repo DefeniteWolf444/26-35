@@ -1,8 +1,9 @@
-import useStyles from "./mainDivStyle";
+import useStyles from "./pageContentStyle";
 import SideBarItem from "../sideBarItem/sideBarItem";
-import AllSongsPage from "./allSongsPage";
+import AllSongsPage from "../allSongsPage/allSongsPage";
 import { useState } from "react";
 import type { Song } from "../types/song";
+import fetchFunc from "../Fetch/fetch";
 
 const MainDiv = () => {
   const { classes } = useStyles();
@@ -10,6 +11,8 @@ const MainDiv = () => {
   const [currentPage, setCurrentPage] = useState('allSongs');
   const [songsList, setSongsList] = useState<Song[]>([]);
 
+  
+  fetchFunc('http://127.0.0.1:5001//api/songs', setSongsList)
   return (
     <div className={classes.mainDiv}>
       <div className={classes.showsOutput}>

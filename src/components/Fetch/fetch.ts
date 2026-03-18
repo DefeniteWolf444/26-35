@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import type { Song } from '../types/song'; 
-import useStyles from "./fetchStyle";
+
 import SongsTable from "../songTable/songsTable";
  
 
@@ -11,8 +11,7 @@ interface Prop {
   setSongsList: (songs: Song[]) => void
 }
 
-const Fetch = (prop: Prop) => {
-  const { classes } = useStyles()
+const fetchFunc = (url:string,setSongsList: (song: Song[]) => void) => {
 
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string>();
@@ -23,11 +22,11 @@ const Fetch = (prop: Prop) => {
     setIsLoading(true);
     try {
       // גישה לשרת
-      const response = await fetch(prop.url);
+      const response = await fetch(url);
       const data = await response.json();
 
       // הוספת שירים לסטייט לאחר שהתקבלו מהשרת
-      prop.setSongsList(data);
+      setSongsList(data);
     } catch (error) {
       // הגדרת שגיאה בגישה לשרת
       setError("Something went wrong");
@@ -46,19 +45,19 @@ const Fetch = (prop: Prop) => {
     fetchSongs();
   }, []);
 
-  return (
-    <div className={classes.songContainer}>
-      {/* הצגת טקסט טעינה במידה והמידע עדיין נטען */}
-      {isLoading && <p>Loading...</p>}
+  // return (
+  //   <div className={classes.songContainer}>
+  //     {/* הצגת טקסט טעינה במידה והמידע עדיין נטען */}
+  //     {isLoading && <p>Loading...</p>}
 
-      {/* הצגת שגיאה בגישה לשרת במידה ויש */}
-      {error && <p>{error}</p>}
+  //     {/* הצגת שגיאה בגישה לשרת במידה ויש */}
+  //     {error && <p>{error}</p>}
 
-      {/* הצגת השירים במידה והטעינה הסתיימה ואין שגיאה */}
-      {!isLoading && !error && <SongsTable songsList={prop.songsList}/>}
+  //     {/* הצגת השירים במידה והטעינה הסתיימה ואין שגיאה */}
+  //     {!isLoading && !error && <SongsTable songsList={prop.songsList}/>}
 
-    </div>
-  );
+  //   </div>
+  // );
 };
 
-export default Fetch;
+export default fetchFunc;

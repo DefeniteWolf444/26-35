@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import MainDiv from './components/mainDiv/mainDiv'
+import PageContent from './components/pageContent/pageContent'
 import Header from './components/header/header'
 import Player from './components/player/player'
 import type { Song } from './components/types/song'
@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Header />
-      <MainDiv />
+      <PageContent />
       <Player />
     </>
   )
