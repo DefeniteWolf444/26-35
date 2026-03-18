@@ -1,7 +1,7 @@
 import { makeStyles } from "tss-react/mui";
 
 const useStyles = makeStyles()(() => ({
-    container: {
+    headerContainer: {
         height: '8%',
         width: '100%',
         display: 'flex',
@@ -14,7 +14,10 @@ const useStyles = makeStyles()(() => ({
     },
     title: {
         height: '100%',
-        marginRight: '1%'
+        marginRight: '1%',
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center'
     },
     icon: {
         height: '100%'
