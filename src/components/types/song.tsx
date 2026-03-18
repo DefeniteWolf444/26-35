@@ -10,7 +10,7 @@ export interface Song {
     album: string
 }
 
-const SongComponent = (props: Song) => {
+const SongItem = (props: Song) => {
     const { classes } = useStyles()
 
     return (
@@ -28,4 +28,4 @@ const SongComponent = (props: Song) => {
     )
 }
 
-export default SongComponent
+export default SongItem
