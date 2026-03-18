@@ -1,9 +1,9 @@
 import Fetch from '../Fetch/fetch'
-import useStyles from './allSongsPage'
+import useStyles from './allSongsPageStyle'
 
 const AllSongsPage = () => {
     return (
-        <h1>hello</h1>
+        <Fetch />
     )
 }
 

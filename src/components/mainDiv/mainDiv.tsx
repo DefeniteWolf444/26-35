@@ -1,5 +1,5 @@
+import AllSongsPage from "./allSongsPage";
 import useStyles from "./mainDivStyle";
-import AllSongsPage from './allSongsPage'
 
 const MainDiv = () => {
     const { classes } = useStyles();
