@@ -5,24 +5,26 @@ import { useState } from "react";
 import type { Song } from "../types/song";
 
 const MainDiv = () => {
-    const { classes } = useStyles();
+  const { classes } = useStyles();
 
-    const [songsList, setSongsList] = useState<Song[]>([]);
-    const [currentPage, setCurrentPage] = useState(<AllSongsPage songsList={songsList} setSongList={setSongsList}/>);
-    return (
-        <div className={classes.mainDiv}>
-            <div className={classes.showsOutput}>
-                {currentPage}
-            </div>
-            <div className={classes.sideBar}>
-                <SideBarItem iconImage="home" name="כל השירים"/>
-                <SideBarItem iconImage="playlist" name="פלייליסטים"/>
-                <SideBarItem iconImage=" " name="מועדפים"/>
-            </div>
-        </div>
-    )
+  const [currentPage, setCurrentPage] = useState('allSongs');
+  const [songsList, setSongsList] = useState<Song[]>([]);
+
+  return (
+    <div className={classes.mainDiv}>
+      <div className={classes.showsOutput}>
+        {currentPage === 'allSongs' && (
+          <AllSongsPage songsList={songsList} setSongList={setSongsList} />
+        )}
+      </div>
+
+      <div className={classes.sideBar}>
+        <SideBarItem iconImage="home" name="כל השירים" />
+        <SideBarItem iconImage="playlist" name="פלייליסטים" />
+        <SideBarItem iconImage=" " name="מועדפים" />
+      </div>
+    </div>
+  );
 };
 
-
-
-export default MainDiv
+export default MainDiv;

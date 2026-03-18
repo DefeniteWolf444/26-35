@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import SongComponent from '../types/song';
+
 import type { Song } from '../types/song'; 
 import useStyles from "./fetchStyle";
 import SongsTable from "../songTable/songsTable";
