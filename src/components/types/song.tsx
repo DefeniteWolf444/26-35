@@ -17,7 +17,8 @@ const SongItem = (props: Song) => {
         <div className={classes.container}>
             <div className={classes.nameContainer}>
                 <PlayArrowIcon className={classes.icon}/>
-                <p>{props.name} - </p>
+                <p>{props.name}</p>
+                <p className={classes.spacer}>-</p>
                 <p>{props.album}</p>
             </div>
             <div className={classes.saveContainer}>

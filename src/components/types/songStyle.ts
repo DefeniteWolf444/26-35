@@ -23,6 +23,10 @@ const useStyles = makeStyles()(() => ({
     },
     icon: {
         color: '#9c59b7'
+    },
+    spacer: {
+        marginRight: '5px',
+        marginLeft: '5px'
     }
 }))
 
