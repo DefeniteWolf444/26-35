@@ -9,7 +9,7 @@ interface Prop {
     setSongList: (songs: Song[]) => void
 }
 
-const AllSongsPage = ({ songsList,setSongList } : Prop) => {
+const AllSongsPage = ({ songsList } : Prop) => {
     
     return (
         <SongsTable songsList={songsList}/>
