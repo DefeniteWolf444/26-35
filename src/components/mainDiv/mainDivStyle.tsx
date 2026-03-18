@@ -5,26 +5,22 @@ const useStyles = makeStyles()(() => ({
     mainDiv: {
         display: 'flex',
         flexDirection: 'row',
-        width: '100vw',
-        height: '80vh',
+        width: '100%',
+        height: '80%',
         backgroundColor: '#121212',
         alignItems: 'center'
     },
     showsOutput: {
-        width: '85vw',
-        height: '80vh'
+        width: '85%',
+        height: '80%'
     },
     sideBar: {
         display: 'flex',
         flexDirection: 'column',
-        width: '15vw',
-        height: '80vh',
+        width: '15%',
+        height: '80%',
         borderLeft: '1px solid gray'
     }
-
-
-
-
 }));
 
 

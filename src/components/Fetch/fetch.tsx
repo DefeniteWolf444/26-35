@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
-import { Song } from "./types";
+import SongComponent from '../types/song';
+import type { Song } from '../types/song'; 
+import useStyles from "./fetchStyle";
+
 
 const Fetch = () => {
+  const { classes } = useStyles()
   const [songsList, setSongsList] = useState<Song[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string>();
@@ -12,7 +16,7 @@ const Fetch = () => {
     setIsLoading(true);
     try {
       // גישה לשרת
-      const response = await fetch("https://exampleUrl.com/songs");
+      const response = await fetch("http://127.0.0.1:5001/api/songs");
       const data = await response.json();
 
       // הוספת שירים לסטייט לאחר שהתקבלו מהשרת
@@ -36,7 +40,7 @@ const Fetch = () => {
   }, []);
 
   return (
-    <div>
+    <div className={classes.songContainer}>
       {/* הצגת טקסט טעינה במידה והמידע עדיין נטען */}
       {isLoading && <p>Loading...</p>}
 
@@ -46,7 +50,7 @@ const Fetch = () => {
       {/* הצגת השירים במידה והטעינה הסתיימה ואין שגיאה */}
       {!isLoading && !error && songsList.map((song, index) => (
         <div key={index}>
-          <h2>{song.name}</h2>
+          <SongComponent id={song.id} name={song.name} artist={song.artist} album={song.album}/>
         </div>
       ))}
     </div>

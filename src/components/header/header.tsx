@@ -5,7 +5,7 @@ const Header = () => {
     const {classes} = useStyles()
 
     return (
-        <header className={classes.container}>
+        <header className={classes.headerContainer}>
             <MusicNoteIcon className={classes.icon}/>
             <h3 className={classes.title}>SpotiPSI</h3>
         </header>
