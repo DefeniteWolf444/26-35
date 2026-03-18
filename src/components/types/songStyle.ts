@@ -7,7 +7,6 @@ const useStyles = makeStyles()(() => ({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        color: '#b3b3b3',
         borderBottom: '1px solid gray'
     },
     nameContainer: {

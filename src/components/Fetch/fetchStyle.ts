@@ -6,7 +6,8 @@ const useStyles = makeStyles()(() => ({
         maxWidth: '100%',
         paddingRight: '1%',
         paddingLeft: '1%',
-        overflowY: 'auto'
+        overflowY: 'auto',
+        scrollbarWidth: 'none'
     }
 }))
 

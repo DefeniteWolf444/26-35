@@ -14,21 +14,21 @@ const SideBarItem = ({ name, iconImage }: SideBarProp) => {
   if (iconImage === 'home') {
     return (
       <div className={classes.sideBarItem}>
-        <HomeIcon />
+        <HomeIcon className={classes.icon}/>
         <p>{name}</p>
       </div>
     );
   } else if (iconImage === 'playlist') {
     return (
       <div className={classes.sideBarItem}>
-        <LibraryMusicIcon />
+        <LibraryMusicIcon  className={classes.icon}/>
         <p>{name}</p>
       </div>
     );
   } else {
     return (
       <div className={classes.sideBarItem}>
-        <FavoriteIcon />
+        <FavoriteIcon  className={classes.icon}/>
         <p>{name}</p>
       </div>
     );

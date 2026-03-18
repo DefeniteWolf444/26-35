@@ -8,20 +8,22 @@ const useStyles = makeStyles()(() => ({
         width: '100%',
         height: '80%',
         backgroundColor: '#121212',
-        alignItems: 'center'
+        color: '#b3b3b3',
+        alignItems: 'center',
+        fontFamily: 'sans-serif'
     },
     showsOutput: {
-        width: '85%',
+        width: '90%',
         height: '100%'
     },
     sideBar: {
         display: 'flex',
         flexDirection: 'column',
-        width: '15%',
+        width: '10%',
         height: '100%',
         borderLeft: '1px solid gray'
     }
 }));
 
 
-export  default useStyles;
+export default useStyles;

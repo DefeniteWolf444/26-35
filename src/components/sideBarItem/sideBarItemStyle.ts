@@ -8,7 +8,7 @@ const useStyles = makeStyles()(() => ({
     flexDirection: "row",
     direction: "rtl",
     alignItems: "center",
-    justifyContent: "space-evenly",
+    justifyContent: "start",
     color: "white",
 
 
@@ -28,6 +28,10 @@ const useStyles = makeStyles()(() => ({
       fontSize: "20px",
     },
   },
+  icon: {
+    marginRight: '6%',
+    marginLeft: '8%'
+  }
 }));
 
 export default useStyles;
