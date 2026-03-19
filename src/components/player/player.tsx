@@ -1,7 +1,7 @@
 import useStyles from './playerStyle';
 
 const Player = () => {
-    const {classes} = useStyles()
+    const { classes } = useStyles()
 
     return (
         <header className={classes.container}>
