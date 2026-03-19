@@ -1,4 +1,3 @@
-import { color } from '@mui/system';
 import { makeStyles } from 'tss-react/mui';
 
 const useStyles = makeStyles()(() => ({
@@ -31,6 +30,10 @@ const useStyles = makeStyles()(() => ({
         padding: '6px 16px',
         cursor: 'pointer',
         fontSize: '13px',
+
+        '&:hover': {
+            borderColor: '#7a43aa',
+        },
     },
 
     list: {
@@ -56,81 +59,6 @@ const useStyles = makeStyles()(() => ({
         fontSize: '13px',
         color: '#a7a7a7',
     },
-
-    playlistTitles: {
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between'
-    },
-
-    overlay: {
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        backgroundColor: 'rgba(0,0,0,0.4)',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        zIndex: 1000,
-    },
-
-    dialog: {
-        backgroundColor: '#3d3d3d',
-        width: '300px',
-        padding: '20px',
-        borderRadius: '4px',
-        direction: 'rtl',
-        zIndex: 1001,
-    },
-
-    dialogTitle: {
-        fontSize: '18px',
-        color: 'white',
-        marginBottom: '20px',
-        textAlign: 'right',
-    },
-
-    dialogInput: {
-        width: '100%',
-        backgroundColor: 'transparent',
-        border: 'none',
-        borderBottom: '1px solid #aaa',
-        color: 'white',
-        padding: '6px 0',
-        marginBottom: '20px',
-        outline: 'none',
-    },
-
-    dialogActions: {
-        display: 'flex',
-        gap: '12px',
-        justifyContent: 'flex-start',
-    },
-
-    saveButton: {
-        background: 'transparent',
-        border: 'none',
-        color: '#c58af9',
-        cursor: 'pointer',
-        fontSize: '14px',
-    },
-
-    cancelButton: {
-        background: 'transparent',
-        border: 'none',
-        color: '#c58af9',
-        cursor: 'pointer',
-        fontSize: '14px',
-    },
-    iconButtonGoBack: {
-        color:'white',
-    },
-    titlePlaylist : {
-        color: 'white'
-    }
-
 }));
 
 export default useStyles;
