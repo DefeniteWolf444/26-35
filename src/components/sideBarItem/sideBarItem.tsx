@@ -6,29 +6,30 @@ import useStyles from './sideBarItemStyle';
 interface SideBarProp {
   name: string;
   iconImage: string;
+  hanldeOnClick: () => void;
 }
 
-const SideBarItem = ({ name, iconImage }: SideBarProp) => {
+const SideBarItem = ({ name, iconImage, hanldeOnClick }: SideBarProp) => {
   const { classes } = useStyles();
 
   if (iconImage === 'home') {
     return (
-      <div className={classes.sideBarItem}>
-        <HomeIcon className={classes.icon} />
+      <div className={classes.sideBarItem} onClick={hanldeOnClick}>
+        <HomeIcon className={classes.icon}/>
         <p>{name}</p>
       </div>
     );
   } else if (iconImage === 'playlist') {
     return (
-      <div className={classes.sideBarItem}>
-        <LibraryMusicIcon className={classes.icon} />
+      <div className={classes.sideBarItem} onClick={hanldeOnClick}>
+        <LibraryMusicIcon  className={classes.icon} />
         <p>{name}</p>
       </div>
     );
   } else {
     return (
-      <div className={classes.sideBarItem}>
-        <FavoriteIcon className={classes.icon} />
+      <div className={classes.sideBarItem} >
+        <FavoriteIcon  className={classes.icon}/>
         <p>{name}</p>
       </div>
     );

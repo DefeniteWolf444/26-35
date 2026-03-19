@@ -12,4 +12,5 @@ const fetchFunc: any = async (url: string) => {
   }
 };
 
+
 export default fetchFunc;
