@@ -6,7 +6,6 @@ import useStyles from './allSongsPageStyle'
 
 interface Prop {
     songsList: Song[]
-    setSongList: (songs: Song[]) => void
 }
 
 const AllSongsPage = ({ songsList } : Prop) => {

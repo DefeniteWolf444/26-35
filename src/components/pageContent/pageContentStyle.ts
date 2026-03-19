@@ -10,7 +10,8 @@ const useStyles = makeStyles()(() => ({
         backgroundColor: '#121212',
         color: '#b3b3b3',
         alignItems: 'center',
-        fontFamily: 'sans-serif'
+        fontFamily: 'sans-serif',
+        gap:'10px',
     },
     showsOutput: {
         width: '90%',
