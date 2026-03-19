@@ -9,8 +9,7 @@ const fetchFunc: any = async (url: string) => {
   } catch (error) {
     console.error(error);
     return;
-    }
+  }
 };
-
 
 export default fetchFunc;

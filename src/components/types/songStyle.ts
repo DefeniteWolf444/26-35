@@ -7,13 +7,20 @@ const useStyles = makeStyles()(() => ({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        borderBottom: '1px solid gray'
+        borderBottom: '1px solid gray',
+        "&:hover": {
+            backgroundColor: "#3b3a3a",
+            cursor: "pointer",
+        }
     },
     nameContainer: {
         height: '100%',
         display: 'flex',
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        "& p": {
+            fontSize: "100%"
+        }
     },
     saveContainer: {
         height: '100%',
@@ -21,12 +28,21 @@ const useStyles = makeStyles()(() => ({
         flexDirection: 'row',
         alignItems: 'center'
     },
-    icon: {
+    playIcon: {
         color: '#9c59b7'
     },
     spacer: {
         marginRight: '5px',
         marginLeft: '5px'
+    },
+    button: {
+        backgroundColor: 'transparent',
+        color: '#b3b3b3',
+        border: '0',
+        padding: '0'
+    },
+    favoriteIcon: {
+        color: '#9c59b7'
     }
 }))
 
