@@ -13,7 +13,7 @@ import PlaylistsPage from "../playlistsPage/PlaylistsPage";
 interface Playlist {
   name:string,
   playlistId: number,
-  songIds: number[]
+  songsId: number[]
 }
 
 
@@ -74,7 +74,9 @@ const MainDiv = () => {
     }
   }
 
-  
+  const addPlaylist = (newPlaylist: Playlist) => {
+    setPlaylists([... playlists, newPlaylist])
+  }
   useEffect(() => {
     const getSongs = async () => {
       const data = await fetchFunc('http://127.0.0.1:5001/api/songs');
@@ -96,11 +98,14 @@ const MainDiv = () => {
     <div className={classes.mainDiv}>
       <div className={classes.showsOutput}>
         {currentPage === 'allSongs' && (
-          <AllSongsPage songsList={songsList} />
+          <AllSongsPage songsList={songsList} favoritesId={favoritesId} editFavorites={editFavorites} />
+        )}
+        {currentPage === 'favorites' && (
+          <FavoritesPage songsList={songsList} favoritesId={favoritesId} editFavorites={editFavorites} />
         )}
 
         {currentPage === 'playlists' && ( 
-          <PlaylistsPage playlists={playlists} setPlaylists={setPlaylists} allSongs={songsList}/>
+          <PlaylistsPage playlists={playlists}/>
         )}
       </div>
 
