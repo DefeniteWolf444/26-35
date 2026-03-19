@@ -35,7 +35,7 @@ const PlaylistsPage = ({ playlists, setPlaylists, allSongs }: Props) => {
             songIds: [],
         };
         try {
-            const response = await fetch('http://127.0.0.1:5001/api/playlists', {
+            await fetch('http://127.0.0.1:5001/api/playlists', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -109,7 +109,6 @@ const PlaylistsPage = ({ playlists, setPlaylists, allSongs }: Props) => {
         );
     }
     else {
-
         let newArrToShow: Song[] = [];
         for (let i = 0; i < allSongs.length; i++) {
             if (currentPlaylist.songIds.includes(allSongs[i].id)) {
