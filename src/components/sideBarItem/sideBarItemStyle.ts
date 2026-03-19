@@ -23,12 +23,13 @@ const useStyles = makeStyles()(() => ({
       height: "20px",
     },
 
-    "& p": {
-      color: "white",
-      fontSize: "20px",
+    "& p": { 
+      color: "#b3b3b3",
+      fontSize: "100%"
     },
   },
   icon: {
+    color: '#b3b3b3',
     marginRight: '6%',
     marginLeft: '8%'
   }
