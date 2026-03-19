@@ -5,8 +5,6 @@ import useStyles from './allSongsPageStyle';
 
 interface Prop {
     songsList: Song[]
-    favoritesId: number[]
-    editFavorites: (id: number) => void;
 }
 
 const AllSongsPage = ({ songsList, favoritesId, editFavorites }: Prop) => {
